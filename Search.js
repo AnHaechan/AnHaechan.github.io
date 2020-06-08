@@ -2,6 +2,7 @@
 function mySearch(){
     var input = document.getElementById("searchInput").value;
     if (0==input.localeCompare("Blue Hawaii")){
+        document.getElementById("searchInput").value = '';
         location.href='./detail_bluehawaii.html';
     }
     else if(0==input.localeCompare("Blue Monday")){

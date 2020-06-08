@@ -46,3 +46,9 @@ const db = firebase.firestore();
     })
     */
   }
+
+  function goBack(){
+    window.history.back();
+  }
+  
+  
