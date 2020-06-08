@@ -1,0 +1,23 @@
+.myPadding {
+    padding-top: 10rem;
+}
+.signInButton{
+    margin-top: 1rem;
+    margin-right: 2rem;
+    float: right;
+}
+.titlefont{
+    font-size: xx-large;
+    text-align: center;
+    font-weight: bold;
+}
+body {
+    background-image: url("./Images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100%;
+}
+.searchMargin{
+    margin-left:5px;
+}

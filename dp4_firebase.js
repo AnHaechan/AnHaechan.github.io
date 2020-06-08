@@ -4,7 +4,10 @@
 // 없애는 opreation : 'deleteFromDatabase_like|dislike|interest (cocktail_data)'
 
 
-
+//뒤로가기 - 임시
+function goBack(){
+  window.history.back();
+}
 
 
 
@@ -23,17 +26,17 @@ var firebaseConfig = {
   
  
 //////////////////////////////
-var s1 = {name: "blue hawaii", pic:"blue_hawaii.jpg", abs:"15%", taste: "Watch and see the hawaii", ingredients : ["lum","karso","coconut"] };
+var s1 = {name: "blue hawaii", pic:"blue_hawaii.jpg", abs:"15%", taste: "Watch and see the hawaii", ingredients : ["White Rum","Blue Curacao","Lemon/Lime Juice"] };
 
-var s2 = {name: "blue monday", pic:"blue_monday.jpg", abs:"25%", taste: "Dangerous sweetness", ingredients : ["lum","sweet and sour"]};
+var s2 = {name: "blue monday", pic:"blue_monday.jpg", abs:"25%", taste: "Dangerous sweetness", ingredients : ["Vodka","Triple Sec", "Blue Curacao"]};
 
-var s3 = {name: "blue sapphire", pic:"blue_sapphire.jpg", abs:"15%", taste: "Watch and see the hawaii", ingredients : ["lum","karso","coconut"] };
+var s3 = {name: "blue sapphire", pic:"blue_sapphire.jpg", abs:"15%", taste: "Watch and see the hawaii", ingredients : ["Malibu Rum","Blue Curacao","Peach Brandy/Peach Schanpps", "Sweet&Sour Mix", "Sprite"] };
 
-var s4 = {name: "screw driver", pic:"screw_driver.jpg", abs:"25%", taste: "Dangerous sweetness", ingredients : ["lum","sweet and sour"]};
+var s4 = {name: "screw driver", pic:"screw_driver.jpg", abs:"25%", taste: "Dangerous sweetness", ingredients : ["Vodka","Orange Juice"]};
 
-var s5 = {name: "orange blossom", pic:"orange_blossom.jpg", abs:"15%", taste: "Watch and see the hawaii", ingredients : ["lum","karso","coconut"] };
+var s5 = {name: "orange blossom", pic:"orange_blossom.jpg", abs:"15%", taste: "Watch and see the hawaii", ingredients : ["Gin","Orange Juice","Sugar"] };
 
-var s6 = {name: "mimosa", pic:"mimosa.jpg", abs:"25%", taste: "Dangerous sweetness", ingredients : ["lum","sweet and sour"]};
+var s6 = {name: "mimosa", pic:"mimosa.jpg", abs:"25%", taste: "Dangerous sweetness", ingredients : ["Sparkling Wine","Orange Juice"]};
 
 
 
@@ -190,4 +193,3 @@ function writeToDatabase_dislike(cocktail) {
        firebase.database().ref('/dislikeBox/').set(dislikeCocktails);
     
   }
-

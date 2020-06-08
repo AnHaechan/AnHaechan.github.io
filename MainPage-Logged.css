@@ -1,0 +1,52 @@
+.myPadding {
+    padding-top: 10rem;
+}
+.IDbutton{
+    margin-top: 1rem;
+    margin-right: 2rem;
+    float: right;
+    color: #007bff;
+    text-align: center;
+    font-size: 2rem;
+    padding: .375rem .75rem;
+}
+.IDbutton:hover{
+    text-decoration: none;
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+.titlefont{
+    font-size: xx-large;
+    text-align: center;
+    font-weight: bold;
+}
+body {
+    background-image: url("./Images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100%;
+}
+.searchMargin{
+    margin-left:5px;
+}
+.makemyown{
+    margin: 1.5rem;
+    color: #000000;
+    text-align: center;
+    font-size: 1rem;
+    padding: .375rem .75rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 0 0.2rem rgba(46, 47, 49, 0.25);
+    background-color: Transparent;
+    background-color: #ffffff;
+    background-color: rgba( 255, 255, 255, 0.5 );
+    outline:none;
+}
+.makemyown:hover{
+    background-color: rgba( 255, 255, 255, 0.9 );
+}
+.rounder{
+    border-radius: 1rem;
+}

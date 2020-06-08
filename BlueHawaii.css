@@ -1,0 +1,38 @@
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  overflow: auto;
+}
+#heart {
+  background: rgb(255, 255, 255);
+}
+#heart:focus {
+  background: royalblue;
+  color: red;
+}
+.btn {
+  background: rgb(255, 255, 255);
+}
+.btn:focus {
+  background: royalblue;
+}
+.centerofpage {
+  text-align: center;
+  overflow: auto;
+  margin: 0;
+  margin-top: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.mypadding {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.mybackbutton {
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+}

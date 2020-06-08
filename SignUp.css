@@ -1,0 +1,46 @@
+body{
+    background-image: url("./Images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100%;
+}
+.centerofpage{
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.mypadding{
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+.myinput{
+  width:100%;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+.myinput:focus{
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+.mybutton{
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: 0.3rem;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.mybackbutton{
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+}

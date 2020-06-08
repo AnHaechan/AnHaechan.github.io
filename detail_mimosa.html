@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mimosa</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link href="BlueHawaii.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-light bg-light">
+      <a href="#" onclick='goBack()'>
+        <svg
+          class="mybackbutton bi bi-chevron-left"
+          width="4em"
+          height="4em"
+          viewBox="0 0 16 16"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+          />
+        </svg>
+      </a>
+      <h1 class="navbar-text center" style="padding-top: 2rem;">
+        Mimosa
+        <span class="badge badge-primary" id="recomend" style="font-size: 10px;"
+          >70%</span
+        >
+      </h1>
+      <p class="navbar-text pull-right" style="padding-top: 2rem;">
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          id="heart"
+          data-toggle="popover"
+          data-content="Added it to the interested-list!"
+          data-placement="bottom"
+        >
+          ♡
+        </button>
+      </p>
+    </nav>
+
+    <div class="centerofpage">
+      <img
+        class="myImage"
+        alt="Image html"
+        width="90%"
+        height="90%"
+        src="./Images/mimosa.jpg"
+      />
+      <p class="myText">
+        Sweet&Sour orange juice followed by scent of pine leaf
+      </p>
+      <div class="mypadding">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#qwe">DETAIL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#asd">SIMILAR TASTE</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="qwe">
+            <br />
+            <p style="color: rgb(0, 255, 128);">ABV ~6%</p>
+            <p style="margin-left: auto; margin-right: auto;">
+              <strong>Ingredient</strong><br />
+              <span
+                class="badge badge-pill badge-primary"
+                data-html="true"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="<img alt='Image html'
+                width='150px'
+                height='150px'
+                src='./Images/sparkling_wine2.jpg' />"
+                >Sparkling Wine(1)</span
+              >
+              <span
+                class="badge badge-pill badge-primary"
+                data-html="true"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="<img alt='Image html'
+              width='150px'
+              height='150px'
+              src='./Images/orange_juice.jpg' />"
+                >Orange Juice(2)</span
+              >
+            </p>
+          </div>
+          <div class="tab-pane fade" id="asd">
+            <p>
+              <br />
+              <br />
+              updated soon<br />
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p style="color: rgb(120, 120, 120);">
+        How was the taste? Remember it! <br />
+      </p>
+      <p style="color: rgb(145, 145, 145); font-size: small;">
+        <button
+        onclick = "writeToDatabase_like(s6); deleteFromDatabase_dislike(s6)"
+          type="button"
+          class="btn btn-outline-primary"
+          style="width: 100px;"
+        >
+          <img
+            alt="Image html"
+            width="30px"
+            height="30px"
+            src="./Images/positive-vote.png"
+          />
+        </button>
+        <button
+        onclick = "writeToDatabase_dislike(s6); deleteFromDatabase_like(s6)"
+          type="button"
+          class="btn btn-outline-primary"
+          style="width: 100px;"
+        >
+          <img
+            alt="Image html"
+            width="30px"
+            height="30px"
+            src="./Images/negative-vote.png"
+          />
+        </button>
+        <br />Based on your data, You'll be recommended cocktails.
+      </p>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $('[data-toggle="popover"]').popover({
+          trigger: "focus",
+        });
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.6/firebase.js"></script>
+<script src="./dp4_firebase.js"></script>
+<script>
+  // !! firebase.js와 haechan.js -> acutal function call (X)
+  // .html간의 sharing : only via firebase!!
+  $(document).ready(function() { 
+  readFromDatabase_interest(false);
+  readFromDatabase_like(false);
+  readFromDatabase_dislike(false);
+  
+
+  });
+</script>
+
+  </body>
+</html>
