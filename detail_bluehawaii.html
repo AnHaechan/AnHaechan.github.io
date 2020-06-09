@@ -14,11 +14,11 @@
   </head>
   <body class="pt-5">
     <nav class="navbar fixed-top navbar-light bg-light">
-      <a href="#" onclick='goBack()'>
+      <a href="#" onclick="goBack()">
         <svg
           class="mybackbutton bi bi-chevron-left"
           width="4em"
-          height="4em"
+          height="2.5em"
           viewBox="0 0 16 16"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
@@ -31,19 +31,15 @@
       </a>
 
       <!--통합한 후에 like/dislike 결과 바탕으로 id="recommend 추천률 계산해서 바꿔야 함-->
-      <div class="navbar-text center" style="padding-top: 2rem;">
-        <h1>
-          Blue Hawaii
-          <span
-            class="badge badge-primary"
-            id="recomend"
-            style="font-size: 10px;"
-            >70%</span
-          >
-        </h1>
+      <div
+        class="navbar-text center"
+        style="font-size: 2rem; font-weight: 500;"
+      >
+        Blue Hawaii
       </div>
-      <p class="navbar-text pull-right" style="padding-top: 2rem;">
+      <div class="navbar-text pull-right">
         <button
+          onclick="writeToDatabase_interest(s1)"
           type="button"
           class="btn btn-outline-primary"
           id="heart"
@@ -53,11 +49,19 @@
         >
           ♡
         </button>
-      </p>
+      </div>
     </nav>
 
     <div class="container">
       <div class="centerofpage">
+        <!--
+          <span
+          class="badge badge-primary center"
+          id="recomend"
+          style="font-size: xx-small; align-self: center;"
+          >Highly recommended for you</span
+        >
+        -->
         <img
           class="myImage"
           alt="Image html"
@@ -65,25 +69,35 @@
           height="90%"
           src="./Images/blue_hawaii.jpg"
         />
+        <div id="recommend"></div>
         <p class="myText">
           <i>Ocean in your eyes, pineapple in your mouth</i>
         </p>
         <div class="mypadding">
           <ul class="nav nav-tabs">
             <li class="nav-item">
-              <a class="nav-link active" data-toggle="tab" href="#qwe"
+              <a
+                class="nav-link active"
+                data-toggle="tab"
+                href="#qwe"
+                style="font-size: small;"
                 >DETAIL</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#asd"
-                >SIMILAR TASTE</a
+              <a
+                class="nav-link"
+                data-toggle="tab"
+                href="#asd"
+                style="font-size: small;"
+                >SIMILAR</a
               >
             </li>
           </ul>
           <div class="tab-content">
             <div class="tab-pane fade show active" id="qwe">
               <br />
+
               <p style="color: rgb(255, 187, 0);">ABV ~17%</p>
               <p style="margin-left: auto; margin-right: auto;">
                 <strong>Ingredient</strong><br />
@@ -147,17 +161,14 @@
           </div>
         </div>
 
-
-
         <p style="color: rgb(120, 120, 120);">
-          <br>How was the taste? Good or Bad?
+          <br />How was the taste? Good or Bad?
         </p>
         <p style="color: rgb(145, 145, 145); font-size: small;">
           <button
-            onclick = "writeToDatabase_like(s1); deleteFromDatabase_dislike(s1)"
+            onclick="writeToDatabase_like(s1); deleteFromDatabase_dislike(s1)"
             type="button"
             class="btn btn-outline-primary"
-            style="width: 100px;"
           >
             <img
               alt="Image html"
@@ -167,10 +178,9 @@
             />
           </button>
           <button
-            onclick = "writeToDatabase_dislike(s1); deleteFromDatabase_like(s1)"
+            onclick="writeToDatabase_dislike(s1); deleteFromDatabase_like(s1)"
             type="button"
             class="btn btn-outline-primary"
-            style="width: 100px;"
           >
             <img
               alt="Image html"
@@ -179,14 +189,11 @@
               src="./Images/negative-vote.png"
             />
           </button>
-          <br /> You can check the list of liked / disliked cocktails later.
+          <br />
+          You can check the list of liked / disliked cocktails later.
         </p>
       </div>
     </div>
-
-
-   
-
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -212,17 +219,21 @@
       });
     </script>
 
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.6/firebase.js"></script>
+    <script src="./dp4_firebase.js"></script>
+    <script src="./detail_s1.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.6/firebase.js"></script>
     <script src="./dp4_firebase.js"></script>
     <script>
       // !! firebase.js와 haechan.js -> acutal function call (X)
       // .html간의 sharing : only via firebase!!
-      $(document).ready(function() { 
-      readFromDatabase_interest(false);
-      readFromDatabase_like(false);
-      readFromDatabase_dislike(false);
-      
+      $(document).ready(function () {
+        readFromDatabase_interest(false);
+        readFromDatabase_like(false);
+        readFromDatabase_dislike(false);
+        asyncCall();
 
       });
     </script>

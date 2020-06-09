@@ -1,0 +1,19 @@
+{
+  "name": "dp_sumi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Search.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChoHnA/DP_sumi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChoHnA/DP_sumi/issues"
+  },
+  "homepage": "https://github.com/ChoHnA/DP_sumi#readme"
+}

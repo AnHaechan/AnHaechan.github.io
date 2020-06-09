@@ -21,10 +21,10 @@ body {
   text-align: center;
   overflow: auto;
   margin: 0;
-  margin-top: 30%;
+  margin-top: 35%;
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -33,6 +33,5 @@ body {
   padding-bottom: 1rem;
 }
 .mybackbutton {
-  padding-top: 1.5rem;
   padding-left: 1rem;
 }

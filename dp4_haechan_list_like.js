@@ -37,7 +37,7 @@ function addLikeElem(item){
 
      itemDiv.innerHTML += ("<br> <div class='central'>" + item.name+"</div> <br>");
      itemDiv.addEventListener( "click", function(){
-       location.href='./index_detail_'+ item.name.replace(/ /g, '')  +'_example.html'; // item name 따라 specify할것
+       location.href='./detail_'+ item.name.replace(/ /g, '')  +'.html'; // item name 따라 specify할것
      });
 
 

@@ -12,13 +12,13 @@
     />
     <link href="BlueHawaii.css" rel="stylesheet" />
   </head>
-  <body>
+  <body class="pt-5">
     <nav class="navbar fixed-top navbar-light bg-light">
-      <a href="#" onclick='goBack()'>
+      <a href="#" onclick="goBack()">
         <svg
           class="mybackbutton bi bi-chevron-left"
           width="4em"
-          height="4em"
+          height="2.5em"
           viewBox="0 0 16 16"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
@@ -29,14 +29,17 @@
           />
         </svg>
       </a>
-      <h1 class="navbar-text center" style="padding-top: 2rem;">
+
+      <!--통합한 후에 like/dislike 결과 바탕으로 id="recommend 추천률 계산해서 바꿔야 함-->
+      <div
+        class="navbar-text center"
+        style="font-size: 2rem; font-weight: 500;"
+      >
         Orange Blossom
-        <span class="badge badge-primary" id="recomend" style="font-size: 10px;"
-          >70%</span
-        >
-      </h1>
-      <p class="navbar-text pull-right" style="padding-top: 2rem;">
+      </div>
+      <div class="navbar-text pull-right">
         <button
+        onclick="writeToDatabase_interest(s5)"
           type="button"
           class="btn btn-outline-primary"
           id="heart"
@@ -46,27 +49,40 @@
         >
           ♡
         </button>
-      </p>
+      </div>
     </nav>
 
     <div class="centerofpage">
       <img
         class="myImage"
         alt="Image html"
-        width="50%"
-        height="50%"
+        width="90%"
+        height="90%"
         src="./Images/orange_blossom.png"
       />
+      <div id="recommend"></div>
       <p class="myText">
         <i>Sweet&Sour orange juice followed by scent of pine leaf</i>
       </p>
       <div class="mypadding">
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#qwe">DETAIL</a>
+            <a
+              class="nav-link active"
+              data-toggle="tab"
+              href="#qwe"
+              style="font-size: small;"
+              >DETAIL</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#asd">SIMILAR TASTE</a>
+            <a
+              class="nav-link"
+              data-toggle="tab"
+              href="#asd"
+              style="font-size: small;"
+              >SIMILAR</a
+            >
           </li>
         </ul>
         <div class="tab-content">
@@ -123,14 +139,13 @@
       </div>
 
       <p style="color: rgb(120, 120, 120);">
-        <br>How was the taste? Good or Bad?
+        <br />How was the taste? Good or Bad?
       </p>
       <p style="color: rgb(145, 145, 145); font-size: small;">
         <button
-        onclick = "writeToDatabase_like(s5); deleteFromDatabase_dislike(s5)"
+          onclick="writeToDatabase_like(s5); deleteFromDatabase_dislike(s5)"
           type="button"
           class="btn btn-outline-primary"
-          style="width: 100px;"
         >
           <img
             alt="Image html"
@@ -140,10 +155,9 @@
           />
         </button>
         <button
-        onclick = "writeToDatabase_dislike(s5); deleteFromDatabase_like(s5)"
+          onclick="writeToDatabase_dislike(s5); deleteFromDatabase_like(s5)"
           type="button"
           class="btn btn-outline-primary"
-          style="width: 100px;"
         >
           <img
             alt="Image html"
@@ -152,7 +166,8 @@
             src="./Images/negative-vote.png"
           />
         </button>
-        <br /> You can check the list of liked / disliked cocktails later.
+        <br />
+        You can check the list of liked / disliked cocktails later.
       </p>
     </div>
     <script
@@ -178,18 +193,20 @@
         $('[data-toggle="tooltip"]').tooltip();
       });
     </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.6/firebase.js"></script>
-        <script src="./dp4_firebase.js"></script>
-        <script>
-          // !! firebase.js와 haechan.js -> acutal function call (X)
-          // .html간의 sharing : only via firebase!!
-          $(document).ready(function() { 
-          readFromDatabase_interest(false);
-          readFromDatabase_like(false);
-          readFromDatabase_dislike(false);
-          
-    
-          });
-        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.6/firebase.js"></script>
+    <script src="./dp4_firebase.js"></script>
+    <script src="./detail_s5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.6/firebase.js"></script>
+    <script src="./dp4_firebase.js"></script>
+    <script>
+      // !! firebase.js와 haechan.js -> acutal function call (X)
+      // .html간의 sharing : only via firebase!!
+      $(document).ready(function () {
+        readFromDatabase_interest(false);
+        readFromDatabase_like(false);
+        readFromDatabase_dislike(false);
+        asyncCall();
+      });
+    </script>
   </body>
 </html>

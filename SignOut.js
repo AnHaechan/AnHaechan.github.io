@@ -1,13 +1,14 @@
   // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "AIzaSyCrtTewJF_Zp1A5UHjzYO5S-1ohVxV7U68",
-    authDomain: "dp4-test.firebaseapp.com",
-    databaseURL: "https://dp4-test.firebaseio.com",
-    projectId: "dp4-test",
-    storageBucket: "dp4-test.appspot.com",
-    messagingSenderId: "343541650289",
-    appId: "1:343541650289:web:6910846b2cd28d773c9cd0"
+    apiKey: "AIzaSyAd5SlRlQygznY3NzYtxdi52kdRCKbcN2o",
+    authDomain: "hci-dp4-teamsumi.firebaseapp.com",
+    databaseURL: "https://hci-dp4-teamsumi.firebaseio.com",
+    projectId: "hci-dp4-teamsumi",
+    storageBucket: "hci-dp4-teamsumi.appspot.com",
+    messagingSenderId: "457957426218",
+    appId: "1:457957426218:web:2be9d5bac4d8394b386f53"
   };
+  
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 

@@ -14,3 +14,7 @@ body {
 .row {
     padding: 10px;
 }
+
+.popover{
+    max-width: 10%; /* Max Width of the popover (depending on the container!) */
+}
