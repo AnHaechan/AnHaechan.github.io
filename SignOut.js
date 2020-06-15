@@ -35,6 +35,6 @@ function myUpdateFunction(){
 //SignOut user with firebase
 function mySignOut(){
     auth.signOut().then(()=>{
-        location.href="MainPage.html";
+        location.href="index.html";
     })
 }

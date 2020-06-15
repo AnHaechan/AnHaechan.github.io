@@ -23,9 +23,9 @@
                   </svg>
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdown1">
-                <a class="dropdown-item" href="./dp4_haechan_list_like.html">Likes</a>
+              <!--  <a class="dropdown-item" href="./dp4_haechan_list_like.html">Likes</a>
                 <a class="dropdown-item" href="./dp4_haechan_list_dislike.html">Dislikes</a>
-                <a class="dropdown-item" href="./dp4_haechan_list_interest.html">Interested</a>
+                <a class="dropdown-item" href="./dp4_haechan_list_interest.html">Interested</a> -->
                 <a class="dropdown-item" onclick="mySignOut()">Sign Out</a>
             </div>
         </div>
@@ -36,7 +36,7 @@
             
             <!-- Search bar with search button -->
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search" name="search" list="cocktail-list" id="searchInput" onkeypress="if(event.keyCode==13) {mySearch(); return false;}" autofocus>
+                <input type="text" class="form-control" placeholder="Search cocktails by their name(e.g. blue hawaii)" name="search" list="cocktail-list" id="searchInput" onkeypress="if(event.keyCode==13) {mySearch(); return false;}" autofocus>
                 <div class="searchMargin">
                     <button class="btn btn-secondary" type="submit" onclick="mySearch()">
                         <svg class="bi bi-search" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -48,17 +48,36 @@
             </div>
             
             <!-- Make My Own button -->
-            <button onclick = "location.href = './makemyown.html' " type="button" class="makemyown">
-                <img src="./Images/cocktail_icon.png" width="100" height="130"><br>
-                Make My Own
-            </button>
-            
-            <!-- Cocktail List button -->
-            <button onclick = "location.href = './dp4_haechan_list_all.html' " type="button" class="makemyown">
-                <img src="./Images/cocktails.png" width="100" height="130"><br>
-                Cocktail List
-            </button>
+            <div class="row">
+                <button onclick = "location.href = './makemyown.html' " type="button" class="makemyown">
+                    <img src="./Images/cocktail_icon.png" width="100" height="130"><br>
+                    Make My Own
+                </button>
+                
+                <!-- Cocktail List button -->
+                <button onclick = "location.href = './dp4_haechan_list_all.html' " type="button" class="makemyown">
+                    <img src="./Images/cocktails.png" width="100" height="130"><br>
+                    Cocktail List
+                </button>
 
+                <button onclick = "location.href = './dp4_haechan_list_like.html' " type="button" class="makemyown">
+                    <img src="./Images/like.png" width="100" height="100"><br>
+                    Cocktails you <br>liked 
+                </button>
+
+                <button onclick = "location.href = './dp4_haechan_list_dislike.html' " type="button" class="makemyown">
+                    <img src="./Images/dislike2.png" width="100" height="110"><br>
+                    Cocktails you <br>
+                    disliked  
+                </button>
+
+                <button onclick = "location.href = './dp4_haechan_list_interest.html' " type="button" class="makemyown">
+                    <img src="./Images/star.png" width="100" height="110"><br>
+                    Cocktails <br>
+                    marked as<br> interest
+                </button>
+
+            </div>
             <!-- Functions that is used when writing, reading the users' like, dislike, interested things -->
             <!--<button onclick="myReadFunction()">myReadFunction</button>-->
             <!--<button onclick="myUpdateFunction()">myUpdateFunction</button>-->

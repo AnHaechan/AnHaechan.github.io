@@ -44,10 +44,10 @@
           class="btn btn-outline-primary"
           id="heart"
           data-toggle="popover"
-          data-content="Added it to the interested-list!"
+          data-content="Marked as interest"
           data-placement="bottom"
         >
-          ♡
+        ☆
         </button>
       </div>
     </nav>
@@ -97,9 +97,9 @@
                 data-toggle="tooltip"
                 data-placement="top"
                 title="<img alt='Image html'
-                width='150px'
+                width='170px'
                 height='150px'
-                src='./Images/vodka2.jpg' />"
+                src='./Ingredients_Images/Vodka_help.gif' />"
                 >Vodka(3)</span
               >
               <span
@@ -108,9 +108,9 @@
                 data-toggle="tooltip"
                 data-placement="top"
                 title="<img alt='Image html'
-              width='150px'
+              width='170px'
               height='150px'
-              src='./Images/triple_sec2.jpg' />"
+              src='./Ingredients_Images/Triple Sec_help.gif' />"
                 >Triple Sec(1)</span
               >
               <span
@@ -119,9 +119,9 @@
                 data-toggle="tooltip"
                 data-placement="top"
                 title="<img alt='Image html'
-              width='150px'
+              width='170px'
               height='150px'
-              src='./Images/blue_curacao2.jpg' />"
+              src='./Ingredients_Images/Blue Curacao_help.gif' />"
                 >Blue Curacao(1)</span
               >
             </p>
@@ -144,6 +144,7 @@
           onclick="writeToDatabase_like(s2); deleteFromDatabase_dislike(s2)"
           type="button"
           class="btn btn-outline-primary"
+          data-toggle="popover" data-content="Added to the liked Cocktails list" data-placement="bottom"
         >
           <img
             alt="Image html"
@@ -156,6 +157,7 @@
           onclick="writeToDatabase_dislike(s2); deleteFromDatabase_like(s2)"
           type="button"
           class="btn btn-outline-primary"
+          data-toggle="popover" data-content="Added to the disliked Cocktails list" data-placement="bottom"
         >
           <img
             alt="Image html"

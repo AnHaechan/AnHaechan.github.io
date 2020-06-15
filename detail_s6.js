@@ -34,10 +34,10 @@ function checkElems() {
   }
   console.log(dislikenames);
 
-  if (likenames.includes(s1['name']) || likenames.includes(s2['name']) || likenames.includes(s3['name'])){
+  if (likenames.includes(s4['name']) || likenames.includes(s5['name']) || likenames.includes(s6['name'])){
     deg_of_recommen +=1;
   }
-  if (dislikenames.includes(s1['name']) || dislikenames.includes(s2['name']) || dislikenames.includes(s3['name']) ){
+  if (dislikenames.includes(s4['name']) || dislikenames.includes(s5['name']) || dislikenames.includes(s6['name']) ){
     deg_of_recommen -=1;
   }
   if (deg_of_recommen >= 2) {

@@ -9,7 +9,7 @@ body {
 }
 #heart:focus {
   background: royalblue;
-  color: red;
+  color: yellow;
 }
 .btn {
   background: rgb(255, 255, 255);

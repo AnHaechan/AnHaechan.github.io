@@ -44,10 +44,10 @@
           class="btn btn-outline-primary"
           id="heart"
           data-toggle="popover"
-          data-content="Added it to the interested-list!"
+          data-content="Marked as interest"
           data-placement="bottom"
         >
-          ♡
+        ☆
         </button>
       </div>
     </nav>
@@ -98,9 +98,9 @@
               data-toggle="tooltip"
               data-placement="top"
               title="<img alt='Image html'
-                width='150px'
+                width='170px'
                 height='150px'
-                src='./Images/vodka2.jpg' />"
+                src='./Ingredients_Images/Vodka_help.gif' />"
               >Vodka(1)</span
             >
             <span
@@ -109,9 +109,9 @@
               data-toggle="tooltip"
               data-placement="top"
               title="<img alt='Image html'
-                width='150px'
+                width='170px'
                 height='150px'
-                src='./Images/orange_juice.jpg' />"
+                src='./Ingredients_Images/Orange Juice_help.gif' />"
               >Orange Juice(2)</span
             >
           </div>
@@ -137,6 +137,7 @@
           onclick="writeToDatabase_like(s4); deleteFromDatabase_dislike(s4)"
           type="button"
           class="btn btn-outline-primary"
+          data-toggle="popover" data-content="Added to the liked Cocktails list" data-placement="bottom"
         >
           <img
             alt="Image html"
@@ -149,6 +150,7 @@
           onclick="writeToDatabase_dislike(s4); deleteFromDatabase_like(s4)"
           type="button"
           class="btn btn-outline-primary"
+          data-toggle="popover" data-content="Added to the disliked Cocktails list" data-placement="bottom"
         >
           <img
             alt="Image html"
