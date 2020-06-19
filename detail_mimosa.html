@@ -39,15 +39,14 @@
       </div>
       <div class="navbar-text pull-right">
         <button
-        onclick="writeToDatabase_interest(s6)"
+        onclick="changeshape();"
           type="button"
           class="btn btn-outline-primary"
-          id="heart"
+          id="heartInterest"
           data-toggle="popover"
           data-content="Marked as interest"
           data-placement="bottom"
         >
-        ☆
         </button>
       </div>
     </nav>
@@ -129,31 +128,13 @@
         <br />How was the taste? Good or Bad?
       </p>
       <p style="color: rgb(145, 145, 145); font-size: small;">
-        <button
-          onclick="writeToDatabase_like(s6); deleteFromDatabase_dislike(s6)"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="popover" data-content="Added to the liked Cocktails list" data-placement="bottom"
-        >
-          <img
-            alt="Image html"
-            width="30px"
-            height="30px"
-            src="./Images/positive-vote.png"
-          />
+        <button onclick="changelikecolor();" id="like" type="button"
+          class="btn btn-outline-primary" data-toggle="popover" data-content="Added to the liked Cocktails list" data-placement="bottom" >
+          <img alt="Image html" width="30px" height="30px" src="./Images/positive-vote.png" />
         </button>
-        <button
-          onclick="writeToDatabase_dislike(s6); deleteFromDatabase_like(s6)"
-          type="button"
-          class="btn btn-outline-primary"
-          data-toggle="popover" data-content="Added to the disliked Cocktails list" data-placement="bottom"
-        >
-          <img
-            alt="Image html"
-            width="30px"
-            height="30px"
-            src="./Images/negative-vote.png"
-          />
+        <button onclick="changedislikecolor();" id="dislike" type="button"
+          class="btn btn-outline-primary"  data-toggle="popover" data-content="Added to the disliked Cocktails list" data-placement="bottom">
+          <img alt="Image html" width="30px" height="30px" src="./Images/negative-vote.png" />
         </button>
         <br />
         You can check the list of liked / disliked cocktails later.
