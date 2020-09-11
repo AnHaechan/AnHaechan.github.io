@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MainPage</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <link href="MainPage.css" rel="stylesheet">
+    </head>
+
+
+    <body style="font-family: Segoe UI;">
+        <!-- Button that leads to Sign In -->
+        <div class="signInButton ">
+            <a class="btn btn-outline-primary" href="SignIn.html" >Sign In</a>
+        </div>
+
+        <div class="container">
+            <div class="myPadding"></div>
+            <h2 class="titlefont">My Own Bartender</h2>
+            <div class="myPadding2"></div>
+
+            <!-- Search bar with button -->
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" name="search" list="cocktail-list" id="searchInput" onkeypress="if(event.keyCode==13) {mySearch(); return false;}" autofocus>
+                <div class="searchMargin">
+                    <button class="btn btn-secondary" type="submit" onclick="mySearch()">
+                        <svg class="bi bi-search" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                            <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Similar to autocomplete -->
+        <datalist id="cocktail-list">
+            <option>Blue Hawaii</option>
+            <option>Blue Monday</option>
+            <option>Blue Sapphire</option>
+            <option>Mimosa</option>
+            <option>Orange Blossom</option>
+            <option>Screwdriver</option>
+        </datalist>
+
+
+        <script src="./Search.js"></script>
+    </body>
+</html>
